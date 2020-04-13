@@ -115,14 +115,14 @@ formatter.match({
   "location": "LoginStepDefinition.user_is_already_on_Login_Page()"
 });
 formatter.result({
-  "duration": 15245262900,
+  "duration": 29096432500,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.title_of_login_page_is_HubSpot_Login()"
 });
 formatter.result({
-  "duration": 7699774300,
+  "duration": 21949040500,
   "status": "passed"
 });
 formatter.match({
@@ -139,28 +139,28 @@ formatter.match({
   "location": "LoginStepDefinition.user_enters_and(String,String)"
 });
 formatter.result({
-  "duration": 944148700,
+  "duration": 6060626199,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_login_button()"
 });
 formatter.result({
-  "duration": 366873500,
+  "duration": 1408046899,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_is_on_home_page()"
 });
 formatter.result({
-  "duration": 4794118500,
+  "duration": 6120007000,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 1105094400,
+  "duration": 1276050800,
   "status": "passed"
 });
 });

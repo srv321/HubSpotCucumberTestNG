@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-BDD_Test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="MyRunner.TestRunner" hash-for-method="feature(HubSpot Login Feature)">feature(HubSpot Login Feature)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="MyRunner.MyRunnerExtentReport" hash-for-method="feature(HubSpot Login Feature)">feature(HubSpot Login Feature)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-BDD_Test_Suite -->
@@ -120,7 +120,7 @@
           <div class="suite-BDD_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">MyRunner.TestRunner</span>
+              <span class="class-name">MyRunner.MyRunnerExtentReport</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -147,7 +147,7 @@
 &lt;suite thread-count=&quot;1&quot; configfailurepolicy=&quot;continue&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;BDD Test Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;HUBSPOT App Test&quot; parallel=&quot;tests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;MyRunner.TestRunner&quot;/&gt;
+      &lt;class name=&quot;MyRunner.MyRunnerExtentReport&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- HUBSPOT App Test --&gt;
 &lt;/suite&gt; &lt;!-- BDD Test Suite --&gt;
@@ -198,13 +198,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
-data.setCell(0, 2, 'MyRunner.TestRunner')
-data.setCell(0, 3, 27894);
+data.setCell(0, 2, 'MyRunner.MyRunnerExtentReport')
+data.setCell(0, 3, 67477);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -230,18 +230,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">MyRunner.TestRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">MyRunner.MyRunnerExtentReport</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">820 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(HubSpot Login Feature)</span>
-                <span class="method-start">489 ms</span>
+                <span class="method-start">1146 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">68626 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28385 ms</span>
+                <span class="method-start">68867 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
