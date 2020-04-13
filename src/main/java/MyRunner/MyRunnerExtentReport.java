@@ -2,27 +2,28 @@ package MyRunner;
 
 import java.io.File;
 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.cucumber.listener.ExtentProperties;
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.ExtentProperties;
+import com.vimalselvam.cucumber.listener.Reporter;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
-	
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
 	@CucumberOptions(
 	        features = "src/main/java/Features",
 	        glue = {"stepDefinitions"},
 	        tags = {"~@Ignore"},
 	        dryRun = false,
-	        format = {
-	                "pretty",
-	                "html:target/cucumber-reports/cucumber-pretty",
-	                "json:target/cucumber-reports/CucumberTestReport.json",
-	                "rerun:target/cucumber-reports/rerun.txt"
-	        },
-	        plugin={"com.cucumber.listener.ExtentCucumberFormatter:output/report.html "})
+	        plugin={"com.cucumber.listener.ExtentCucumberFormatter:output/report.html ",
+	        		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+	        		"pretty",
+	        		"html:target/cucumber-reports/cucumber-pretty",
+	        		"json:target/cucumber-reports/CucumberTestReport.json",
+	        		"rerun:target/cucumber-reports/rerun.txt"
+	        		})
 
 	
 	public class MyRunnerExtentReport extends AbstractTestNGCucumberTests { 
