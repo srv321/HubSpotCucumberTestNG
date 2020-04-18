@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import io.cucumber.testng.CucumberFeatureWrapper;
 import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
@@ -25,22 +26,27 @@ public class TestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
  
     @BeforeClass(alwaysRun = true)
-    public void setUpClass() throws Exception {
-        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    public void setUpClass(){
+    	 testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
  
+//    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
+//    public void feature(CucumberFeatureWrapper cucumberFeature) {
+//        testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+//    }
+    
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
-    public void feature(CucumberFeatureWrapper cucumberFeature) {
-        testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+    public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
+        testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());
     }
  
-    @DataProvider
-    public Object[][] features() {
-        return testNGCucumberRunner.provideFeatures();
+    @DataProvider(name="features")
+    public Object[][] scenarios() {
+        return testNGCucumberRunner.provideScenarios();
     }
  
     @AfterClass(alwaysRun = true)
-    public void tearDownClass() throws Exception {
+    public void tearDownClass(){
         testNGCucumberRunner.finish();
     }
 }
